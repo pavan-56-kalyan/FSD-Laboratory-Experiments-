@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Employee Records Dashboard</h2>
+
+<div class="controls">
+
+<select id="sort">
+<option value="name">Sort by Name</option>
+<option value="date">Sort by Joining Date</option>
+</select>
+
+<select id="department">
+<option value="">All Departments</option>
+<option value="IT">IT</option>
+<option value="HR">HR</option>
+<option value="Finance">Finance</option>
+</select>
+
+<button onclick="loadEmployees()">Load Data</button>
+
+</div>
+
+<table id="empTable">
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Joining Date</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<h3>Department Count</h3>
+<ul id="deptCount"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

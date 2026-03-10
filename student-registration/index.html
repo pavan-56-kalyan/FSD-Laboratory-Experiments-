@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+<h2>Student Registration Form</h2>
+
+<form id="studentForm">
+
+<label>Name</label>
+<input type="text" id="name" required>
+
+<label>Email</label>
+<input type="email" id="email" required>
+
+<label>Date of Birth</label>
+<input type="date" id="dob" required>
+
+<label>Department</label>
+<select id="department">
+<option value="CSE">CSE</option>
+<option value="IT">IT</option>
+<option value="ECE">ECE</option>
+<option value="MECH">MECH</option>
+</select>
+
+<label>Phone</label>
+<input type="tel" id="phone" required>
+
+<button type="submit">Register</button>
+
+</form>
+
+<h3>Registered Students</h3>
+<button onclick="loadStudents()">Show Students</button>
+
+<table id="studentTable">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>DOB</th>
+<th>Department</th>
+<th>Phone</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
