@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Order Management Dashboard</h1>
+
+<table id="orderTable">
+<thead>
+<tr>
+<th>Customer</th>
+<th>Product</th>
+<th>Quantity</th>
+<th>Price</th>
+<th>Total</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+</table>
+
+<script>
+
+fetch("http://localhost:5000/orders")
+.then(res=>res.json())
+.then(data=>{
+
+let rows="";
+
+data.forEach(order=>{
+rows+=`
+<tr>
+<td>${order.name}</td>
+<td>${order.product_name}</td>
+<td>${order.quantity}</td>
+<td>${order.price}</td>
+<td>${order.total_price}</td>
+<td>${order.order_date}</td>
+</tr>
+`;
+});
+
+document.querySelector("#orderTable tbody").innerHTML=rows;
+
+});
+
+</script>
+
+</body>
+</html>
